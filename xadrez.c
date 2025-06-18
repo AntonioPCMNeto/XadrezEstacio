@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    // ========================
+    
     // Movimento da Torre (for)
-    // ========================
+    
     // A torre vai se mover 5 casas para a direita
     printf("Movimento da Torre:\n");
 
@@ -15,9 +15,9 @@ int main() {
     // Linha em branco para separar os movimentos
     printf("\n");
 
-    // ========================
+    
     // Movimento do Bispo (while)
-    // ========================
+    
     // O bispo vai se mover 5 casas na diagonal: cima + direita
     printf("Movimento do Bispo:\n");
 
@@ -29,9 +29,9 @@ int main() {
 
     printf("\n");
 
-    // ========================
+    
     // Movimento da Rainha (do-while)
-    // ========================
+
     // A rainha vai se mover 8 casas para a esquerda
     printf("Movimento da Rainha:\n");
 
@@ -41,6 +41,30 @@ int main() {
         passo++; // incrementa o passo
     } while (passo <= 8);
 
+    printf("\n");
+
+    
+    // Movimento do Cavalo (for + while)
+    
+    // O cavalo se move em "L": 2 casas para baixo e 1 para a esquerda
+    printf("Movimento do Cavalo:\n");
+
+    int casasParaBaixo = 2;
+    int casasParaEsquerda = 1;
+
+    // Loop externo (for) para movimento para baixo
+    for (int b = 1; b <= casasParaBaixo; b++) {
+        printf("Baixo\n");
+
+        // Após o segundo movimento para baixo, acontecerá o movimento para esquerda
+        if (b == casasParaBaixo) {
+            int e = 0;
+            while (e < casasParaEsquerda) {
+                printf("Esquerda\n");
+                e++;
+            }
+        }
+    }
+
     return 0;
 }
-
